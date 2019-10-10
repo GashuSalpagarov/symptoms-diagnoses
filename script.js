@@ -47,10 +47,14 @@ function deleteSymptomByIndex(symptomDataId) {
 
     if (!symptoms.length && !symptomsSubmitBtn.classList.contains('hidden')) {
         symptomsSubmitBtn.classList.add('hidden');
+    } else if (symptoms.length > 0) {
+        symptomsSubmitBtn.classList.remove('hidden');
     }
     diagnosesContainer.classList.add('hidden');
 };
 
 function symptomsSubmit() {
     diagnosesContainer.classList.remove('hidden');
+    symptomsSubmitBtn.classList.add('hidden');
+    document.querySelector('.diagnoses__item-percent').innerHTML = Math.round(Math.random() * 100);
 };
