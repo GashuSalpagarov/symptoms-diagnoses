@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Symptoms & diagnoses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="symptoms" class="symptoms">
+            <div class="symptoms__title title">Симптомы</div>
+            <form id="symptomForm" class="symptoms__form">
+                <select name="name" id="name" required title="Выберите один из симптомов" oninvalid="this.setCustomValidity('Выберите один из симптомов')" oninput="setCustomValidity('')">
+                    <option value="">Симптом</option>
+                    <option value="1">Боль</option>
+                    <option value="2">Кашель</option>
+                    <option value="3">Чесотка</option>
+                </select>
+                <select name="part" id="part" required title="Выберите одну из частей тела" oninvalid="this.setCustomValidity('Выберите одну из частей тела')" oninput="setCustomValidity('')">
+                    <option value="">Часть тела</option>
+                    <option value="1">Нога</option>
+                    <option value="2">Голова</option>
+                    <option value="3">Живот</option>
+                </select>
+                <select name="nature" id="nature" required title="Выберите характер" oninvalid="this.setCustomValidity('Выберите характер')" oninput="setCustomValidity('')">
+                    <option value="">Характер</option>
+                    <option value="1">Тупая</option>
+                    <option value="2">Колющая</option>
+                    <option value="3">Пульсирующая</option>
+                </select>
+                <select name="side" id="side" required title="Выберите сторону" oninvalid="this.setCustomValidity('Выберите сторону')" oninput="setCustomValidity('')">
+                    <option value="">Сторона</option>
+                    <option value="1">Правая</option>
+                    <option value="2">Левая</option>
+                </select>
+
+                <button id="symptomAdd" class="symptom__btn">добавить</button>
+            </form>
+            <div class="symptoms__items" id="symptomsItems"></div>
+            <button class="symptoms__submit hidden" id="symptomsSubmit">Отправить</button>
+        </div>
+        <div id="diagnoses" class="diagnoses">
+            <div class="diagnoses__title title">Диагнозы</div>
+            <div class="diagnoses__items hidden">
+                <div class="diagnoses__top">
+                    <div class="diagnoses__param">Наименование</div>
+                    <div class="diagnoses__param">Вероятность</div>
+                </div>
+                <div class="diagnoses__item">
+                    <div class="diagnoses__item-name">Чем-то болен</div>
+                    <div class="diagnoses__item-percent">55%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
