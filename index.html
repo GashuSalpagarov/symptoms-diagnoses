@@ -37,8 +37,9 @@
                     <option value="1">Правая</option>
                     <option value="2">Левая</option>
                 </select>
+                <input type="number" step="0.1" min="36" max="41" maxlength="3" name="temperature" id="temperature" placeholder="36.6℃">
 
-                <button id="symptomAdd" class="symptom__btn">добавить</button>
+                <button id="symptomAdd" class="symptom__btn">+</button>
             </form>
             <div class="symptoms__items" id="symptomsItems"></div>
             <button class="symptoms__submit hidden" id="symptomsSubmit">Отправить</button>
@@ -52,7 +53,7 @@
                 </div>
                 <div class="diagnoses__item">
                     <div class="diagnoses__item-name">Чем-то болен</div>
-                    <div class="diagnoses__item-percent">55%</div>
+                    <div class="diagnoses__item-percent"></div>
                 </div>
             </div>
         </div>

@@ -2,8 +2,7 @@
     box-sizing: border-box;
 }
 
-body,
-html {
+body, html {
     height: 100%;
     padding: 0;
     margin: 0;
@@ -26,8 +25,7 @@ html {
     color: #000;
 }
 
-.symptoms,
-.diagnoses {
+.symptoms, .diagnoses {
     flex-grow: 1;
     height: 100%;
     max-width: 50%;
@@ -46,7 +44,11 @@ html {
 }
 
 .symptoms__form>select {
-    width: 19%;
+    width: calc((100% - 100px)/ 4);
+}
+
+.symptoms__form>input[type="number"]{
+    width: 60px;
 }
 
 .symptoms__items {
@@ -56,8 +58,7 @@ html {
     overflow-y: auto;
 }
 
-.symptom,
-.diagnoses__item {
+.symptom, .diagnoses__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,11 +69,14 @@ html {
 }
 
 .symptom__param {
-    width: 19%;
+    width: calc((100% - 100px)/ 4);
+}
+.symptom__param--number{
+    width: 60px;
 }
 
 .symptom__btn {
-    width: 15%;
+    width: 25px;
 }
 
 .diagnoses__top {
