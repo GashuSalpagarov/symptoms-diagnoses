@@ -34,7 +34,8 @@ function addSymptom() {
         symptomHtml += `<div class="symptom__param">${label}</div>`
     });
     
-    symptomHtml += `<div class="symptom__param symptom__param--number">${symptomForm.querySelector('#temperature').value}℃</div>`
+    let tempLabel = (symptomForm.querySelector('#temperature').value) ? symptomForm.querySelector('#temperature').value + '℃': '...';
+    symptomHtml += `<div class="symptom__param symptom__param--number">${tempLabel}</div>`
 
     symptomHtml += `<button data-id="${symptom.id}" class="symptom__del symptom__btn">-</button></div>`;
     symptomsContainer.innerHTML += symptomHtml;
