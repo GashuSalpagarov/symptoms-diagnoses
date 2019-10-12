@@ -30,7 +30,7 @@ function addSymptom() {
     let symptomHtml = `<div class="symptom" data-id="${symptom.id}">`;
     symptomForm.querySelectorAll('select').forEach(select => {
         symptom[select.name] = select.value;
-        let label = select.options[select.selectedIndex].text;
+        let label = (select.value != 0) ?select.options[select.selectedIndex].text : '...';
         symptomHtml += `<div class="symptom__param">${label}</div>`
     });
 
@@ -56,5 +56,5 @@ function deleteSymptomByIndex(symptomDataId) {
 function symptomsSubmit() {
     diagnosesContainer.classList.remove('hidden');
     symptomsSubmitBtn.classList.add('hidden');
-    document.querySelector('.diagnoses__item-percent').innerHTML = Math.round(Math.random() * 100);
+    document.querySelector('.diagnoses__item-percent').innerHTML = Math.round(Math.random() * 100) + ' %';
 };
